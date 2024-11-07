@@ -22,6 +22,7 @@
         stroke-width="1.5"
         stroke="currentColor"
         class="w-6 md:hidden"
+        id="menuIcon"
       >
         <path
           stroke-linecap="round"
@@ -30,6 +31,47 @@
         />
       </svg>
       <ul class="gap-5 text-gray-600 hidden md:flex">
+        <li>
+          <a href="./index.html" class="hover:underline hover:text-black"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="./product.html" class="hover:underline hover:text-black"
+            >Products</a
+          >
+        </li>
+        <li>
+          <a href="./contact.html" class="hover:underline hover:text-black"
+            >Contacts</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!------------------------------Side Navbar------------------------------------->
+    <nav
+      id="side-nav"
+      class="bg-red-100 fixed z-20 top-0 transition-all duration-1000"
+      style="width: 50%; height: 100vh; right: -50%"
+    >
+      <div class="text-right p-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="20"
+          width="15"
+          viewBox="0 0 384 512"
+          id="close-nav"
+          class="inline cursor-pointer"
+        >
+          <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            fill="#000000"
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+          />
+        </svg>
+      </div>
+      <ul class="flex flex-col gap-10 items-center text-gray-600">
         <li>
           <a href="./index.html" class="hover:underline hover:text-black"
             >Home</a
@@ -58,7 +100,7 @@
           Plants for your Interior
         </h2>
         <div>
-          <button id="myButton" class="bg-black rounded p-2 text-white">
+          <button id="myButton" onclick="productLocation" class="bg-black rounded p-2 text-white">
             Shop Now
           </button>
           <button class="border border-black rounded p-2">Watch Video</button>
@@ -255,10 +297,10 @@
       <p>&copy; 2024 greenden.com</p>
     </footer>
 
-    <script type="text/javascript">
-      document.getElementById("myButton").onclick = function () {
-        location.href = "./product.html";
-      };
+    <script src="./index.js" >
+      // document.getElementById("myButton").onclick = function () {
+      //   location.href = "./product.html";
+      // };
     </script>
   </body>
 </html>
